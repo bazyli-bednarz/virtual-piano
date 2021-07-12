@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(30,30,30);
+}
+
+input[type=range] {
+    width: 20%;
+    min-width: 200px;
+    margin: 20px;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    border: 2px solid red;
+    border-radius: 22px;
+    width: 100%;
+    height: 16px;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -9.3px;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 5px solid #fe0000;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+input[type=range]::-moz-range-track {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    border: 2px solid red;
+    border-radius: 22px;
+    width: 100%;
+    height: 16px;
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 5px solid #fe0000;
+    border-radius: 50px;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 11px 0;
+    color: transparent;
+    width: 50%;
+    height: 16px;
+    cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+    background: #d60000;
+    border: 2px solid red;
+    border-radius: 45px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ff0000;
+    border: 2px solid red;
+    border-radius: 45px;
+}
+input[type=range]::-ms-thumb {
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 5px solid #fe0000;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #ff0000;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ff2929;
+}
+
+@supports (-ms-ime-align:auto) {
+    input[type=range] {
+        margin: 0;
+    }
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container kbd {
+    text-align: center;
+    display: inline-block;
+    border-top: 5px solid rgb(30,30,30);
+    border-right: 5px solid rgb(10,10,10);
+    border-bottom: 5px solid rgb(20,20,20);
+    border-left: 5px solid rgb(40,40,40);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    font-family: 'Encode Sans SC', sans-serif;
+    cursor: pointer;
+}
+
+.container .white-keys kbd {
+    font-size: max(4vmin, 16px);
+    background-color: white;
+    height: 40vmin;
+    width: 10vmin;
+    min-height: 150px;
+    min-width: 30px;
+    line-height: max(60vmin, 220px);
+}
+
+.container .white-keys kbd:hover, .container .white-keys kbd:focus {
+    border-color: red;
+}
+
+.container .black-keys kbd {
+    font-size: max(3vmin, 10px);
+    color: white;
+    background-color: black;
+    height: 25vmin;
+    width: 6vmin;
+    min-height: 90px;
+    min-width: 22px;
+    line-height: max(30vmin, 100px);
+}
+
+.container .black-keys kbd:hover, .container .black-keys kbd:focus {
+    border-color: red;
+}
+
+.container .keyboard {
+    position: relative;
+}
+
+.container .black-keys * {
+    position: absolute;
+    top: 0;
+}
+
+.container .black-keys #W-key {
+    left: 9%;
+}
+
+.container .black-keys #E-key {
+    left: 24%;
+}
+
+.container .black-keys #T-key {
+    left: 53%;
+}
+
+.container .black-keys #Y-key {
+    left: 67%;
+}
+
+.container .black-keys #U-key {
+    left: 82%;
+}
+
+.pressed-white {
+    background: darkgrey !important;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(133,133,133,1) 100%) !important;
+}
+
+.pressed-black {
+    background: rgb(30,30,30) !important;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 100%) !important;
+}
